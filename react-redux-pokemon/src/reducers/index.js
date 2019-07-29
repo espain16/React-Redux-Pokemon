@@ -7,8 +7,8 @@ import {
 //create initial state 
 
 const initialState = {
-    pokemon:[],
-    isFetching:false,
+    pokemons:[],
+    isFetching:true,
     error:''
 }
 
@@ -28,7 +28,7 @@ export const rootReducer = (state = initialState, action) => {
             ...state,
             isFetching: false,
             error: '',
-            pokemon: action.payload
+            pokemons: action.payload
         }
         case FETCH_POKE_FAILURE:
         return {

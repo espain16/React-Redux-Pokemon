@@ -17,12 +17,20 @@ const PokemonList = (props) => {
 
     return (
         <div>
-        {props.pokemons}    
+        {props.pokemons.map((pokemon)=>{
+            return <Pokemon {...pokemon}/>
+        })}    
         </div>
     );
 };
 
 
 //connect takes two arguments mapStateToProps and mapActionsToProps/ or just an object 
+
+const mapStateToProps = (state)=> {
+    return{
+        ...state
+    }
+}
 
 export default connect(mapStateToProps, {getPokemon})(PokemonList);
