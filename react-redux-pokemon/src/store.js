@@ -3,7 +3,7 @@
 
 import { createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-//import { rootReducer} from '.'
+import { rootReducer} from './reducers';
 
 
 //setup your store, invoke createStore 
